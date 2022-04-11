@@ -1,0 +1,206 @@
+* {
+  font-family: "Comfortaa", cursive;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+.todo-list-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  grid-template-rows: 125px auto;
+  grid-template-areas:
+    "project-form task-form"
+    "projects tasks";
+}
+
+input[type="text"] {
+  padding: 8px;
+  border-radius: 1rem;
+  border: 2px solid #495057;
+}
+
+input[type="submit"] {
+  font-size: 1.25rem;
+  border-radius: 32px;
+  border: 2px solid #495057;
+  background-color: #f8f9fa;
+  color: #495057;
+  margin-left: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  font-size: 1.25rem;
+  border-radius: 32px;
+  border: 2px solid #495057;
+  background-color: #495057;
+  color: #ced4da;
+  margin-left: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.project-form-container {
+  grid-area: project-form;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dee2e6;
+}
+
+.project-form {
+  display: flex;
+  align-items: center;
+}
+
+.all-projects {
+  grid-area: projects;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dee2e6;
+  max-height: 844px;
+  overflow-y: auto;
+}
+
+.project-container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-container {
+  width: 80%;
+  padding: 0 0.75rem;
+  transition: all 0.2s ease-in-out;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.project-container:hover {
+  width: 80%;
+  padding: 0 0.75rem;
+  background-color: #ced4da;
+  transition: all 0.2s ease-in-out;
+}
+
+.delete-project {
+  font-size: 1.25rem;
+  color: #495057;
+  background: #f8f9fa;
+  border: 2px solid #495057;
+  border-radius: 32px;
+  transform: rotate(45deg);
+  transition: all 0.2s ease;
+}
+
+.delete-project:hover {
+  font-size: 1.25rem;
+  color: #ced4da;
+  background: none;
+  background-color: #495057;
+  border: 2px solid #495057;
+  border-radius: 32px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.task-form-container {
+  grid-area: task-form;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.task-form {
+  display: flex;
+  align-items: center;
+}
+
+.all-tasks {
+  grid-area: tasks;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa;
+  max-height: 844px;
+  overflow-y: auto;
+}
+
+.task-container {
+  margin: 1rem 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.task-container > button {
+  margin: 0 0.25rem;
+  background: none;
+  border: 2px solid #495057;
+  border-radius: 32px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.task-container > button:hover {
+  margin: 0 0.25rem;
+  border: 2px solid #495057;
+  background-color: #495057;
+  color: #ced4da;
+  border-radius: 32px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+@media only screen and (max-width: 425px) {
+  .todo-list-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 125px auto 125px auto;
+    grid-template-areas:
+      "project-form"
+      "projects"
+      "task-form"
+      "tasks";
+  }
+
+  .project-form-container {
+    grid-area: project-form;
+  }
+
+  .all-projects {
+    grid-area: projects;
+  }
+
+  .task-form-container {
+    grid-area: task-form;
+  }
+
+  .all-tasks {
+    grid-area: tasks;
+  }
+}

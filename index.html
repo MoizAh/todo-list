@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>todo</title>
+  </head>
+  <body>
+    <main>
+      <div class="todo-list-container">
+        <div class="project-form-container">
+          <form class="project-form">
+            <input
+              type="text"
+              name="project-form-name"
+              id="project-form-name"
+              placeholder="Project"
+            />
+            <input type="submit" value="+" id="project-form-submit" />
+          </form>
+        </div>
+        <div class="all-projects"></div>
+        <div class="task-form-container">
+          <form class="task-form">
+            <input
+              type="text"
+              name="task-form-name"
+              id="task-form-name"
+              placeholder="Task"
+            />
+            <input type="submit" value="+" id="task-form-submit" />
+          </form>
+        </div>
+        <div class="all-tasks"></div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
